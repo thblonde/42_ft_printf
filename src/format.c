@@ -17,8 +17,8 @@ void    pointer(va_list arg, int *pcount)
 
     p = va_arg(arg, unsigned long long);
     ft_putstr_fd("0x", 1);
-    ft_putnbr_base(p, "0123456789abcdef");
-    *pcount += 3 + countdigits(p);
+    ft_putnbr_base(p, "0123456789abcdef", pcount);
+    *pcount += 2;
 }
 
 void    integer(va_list arg, int *pcount)
@@ -45,8 +45,7 @@ void    hexadecimal(va_list arg, int *pcount, char c)
 
     x = va_arg(arg, unsigned int);
     if (c == 'x')
-        ft_putnbr_base(x, "0123456789abcdef");
+        ft_putnbr_base(x, "0123456789abcdef", pcount);
     else
-        ft_putnbr_base(x, "0123456789ABCDEF");
-    *pcount += countdigits(x);
+        ft_putnbr_base(x, "0123456789ABCDEF", pcount);
 }

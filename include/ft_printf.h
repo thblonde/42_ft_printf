@@ -19,7 +19,7 @@ void    hexadecimal(va_list arg, int *pcount, char c);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 size_t	ft_strlen(const char *s);
-void	ft_putnbr_base(int nbr, const char *base);
+void	ft_putnbr_base(int nbr, const char *base, int *pcount);
 int	    countdigits(int n);
 void	ft_putnbr_fd(int n, int fd);
 
