@@ -26,8 +26,7 @@ void    integer(va_list arg, int *pcount)
     int i;
 
     i = va_arg(arg, int);
-    ft_putnbr_fd(i, 1);
-    *pcount += countdigits(i);
+    print_integer(i, 1, pcount);
 }
 
 void    unsigned_int(va_list arg, int *pcount)
@@ -35,8 +34,7 @@ void    unsigned_int(va_list arg, int *pcount)
     unsigned int    u;
 
     u = va_arg(arg, unsigned int);
-    ft_putnbr_fd(u, 1);
-    *pcount += countdigits(u);
+    print_unsigned_int(u, 1, pcount);
 }
 
 void    hexadecimal(va_list arg, int *pcount, char c)
@@ -45,7 +43,7 @@ void    hexadecimal(va_list arg, int *pcount, char c)
 
     x = va_arg(arg, unsigned int);
     if (c == 'x')
-        ft_putnbr_base(x, "0123456789abcdef", pcount);
+        print_hexa(x, "0123456789abcdef", pcount);
     else
-        ft_putnbr_base(x, "0123456789ABCDEF", pcount);
+        print_hexa(x, "0123456789ABCDEF", pcount);
 }

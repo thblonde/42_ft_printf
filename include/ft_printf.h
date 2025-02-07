@@ -21,7 +21,8 @@ void	ft_putstr_fd(char *s, int fd);
 size_t	ft_strlen(const char *s);
 void	print_hexa(unsigned int nbr, const char *base, int *pcount);
 void	print_pointer(unsigned long long nbr, char *base, int *pcount);
+void	print_unsigned_int(unsigned int n, int fd, int *pcount);
+void	print_integer(int n, int fd, int *pcount);
 int	    countdigits(int n);
-void	ft_putnbr_fd(int n, int fd);
 
 #endif
